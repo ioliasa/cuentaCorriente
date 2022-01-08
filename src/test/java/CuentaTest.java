@@ -35,7 +35,7 @@ public class CuentaTest extends TestCase {
 
 	@Test
 	public void testGetNss() {
-		c = new Cuenta("Inmasss");
+		c = new Cuenta("Inma");
 		assertTrue("Inma".equals(c.getNss()));
 	}
 
