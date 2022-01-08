@@ -1,7 +1,4 @@
-package banco;
-
-
-
+package main.banco;
 
 public class Cuenta {
 	

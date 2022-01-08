@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="banco.Cuenta" %>
-<%@page import="banco.controller.AdminBanco" %>
+<%@page import="main.banco.controller.AdminBanco" %>
+<%@page import="main.banco.Cuenta" %>
 
 <!DOCTYPE html>
 <html>

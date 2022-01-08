@@ -1,4 +1,5 @@
-package banco.controller;
+package main.banco.controller;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import banco.Cuenta;
+import main.banco.*;
 
 
 
@@ -22,7 +23,6 @@ public class AdminBanco extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Cuenta cuenta;
 
-	
 	public void init(String ncc, double saldo) {
 		cuenta = new Cuenta(ncc, saldo);
 	}
@@ -41,23 +41,36 @@ public class AdminBanco extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getParameter("action");
+		int opc=0;
+		if (action.equals("empezar"))
+			opc = 1;
+		else if (action.equals("ingresar"))
+			opc =2;
+		else if (action.equals("realizarIngreso"))
+			opc = 3;
+		else if (action.equals("reintegrar"))
+			opc = 4;
+		else if (action.equals("realizarReintegro"))
+			opc = 5;
+		else if (action.equals("saldo"))
+			opc = 6;
 		try {
-			switch (action) {
-			case "empezar":
+			switch (opc) {
+			case 1:
 				empezar(request, response);
 				break;
-			case "ingresar":
+			case 2:
 				ingresar(request, response);
 				break;		
-			case "realizarIngreso":
+			case 3:
 				realizarIngreso(request, response);
 				break;
-			case "reintegrar":
+			case 4:
 				reintegrar(request, response);
 				break;	
-			case "realizarReintegro":
+			case 5:
 				realizarReintegro(request, response);
-			case "saldo":
+			case 6:
 				saldo(request, response);
 				break;
 			default:
