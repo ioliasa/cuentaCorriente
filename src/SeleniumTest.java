@@ -17,8 +17,15 @@ public class SeleniumTest {
 			
 			WebElement ncc = driver.findElement(By.id("ncc"));
 			WebElement saldo = driver.findElement(By.id("saldo"));
+			WebElement ok = driver.findElement(By.id("ok"));
 			
-			
+			ncc.sendKeys("1234");
+			Thread.sleep(2000);
+
+			saldo.sendKeys("1000");
+			Thread.sleep(2000);
+
+			ok.click();
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

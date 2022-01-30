@@ -6,13 +6,14 @@ package test.java;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 import junit.framework.TestCase;
 import main.banco.*;
 	
 
 public class CuentaTest extends TestCase {
 	private Cuenta c;
-
+	
 	
 	
 	public CuentaTest() {
@@ -22,6 +23,7 @@ public class CuentaTest extends TestCase {
 	@BeforeEach
 	public void inicial() {
 		c = new Cuenta("Inma");
+
 		
 	}
 
