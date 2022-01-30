@@ -16,7 +16,7 @@
     <div>Introduce el saldo inicial:<input type="number" id="saldo" name="saldo"
        min="0.0" step="0.01" ></div>
 	
-	<input type="submit" value="OK">
+	<input type="submit" id = "ok" value="OK">
 </form> </div>
 </body>
 </html>

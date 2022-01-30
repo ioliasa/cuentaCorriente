@@ -14,6 +14,8 @@ public class Cuenta {
 		this.nss = nss;
 		this.saldo= 0;
 		
+	
+		
 	}
 
 	public Cuenta(String nss, double saldo) {
