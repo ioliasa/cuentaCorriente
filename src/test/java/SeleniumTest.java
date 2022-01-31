@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SeleniumTest {
 
@@ -18,7 +19,9 @@ public class SeleniumTest {
 	@Before
 	public void inicial() {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
-		driver = new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions().setHeadless(true);
+		driver = new ChromeDriver(options);
 	}
 	
 	@Test
@@ -31,7 +34,8 @@ public class SeleniumTest {
 		WebElement ncc = driver.findElement(By.id("ncc"));
 		WebElement saldo = driver.findElement(By.id("saldo"));
 		WebElement ok = driver.findElement(By.id("ok"));
-		
+		ChromeOptions options = new ChromeOptions().setHeadless(true);
+		WebDriver driver = new ChromeDriver(options);
 		ncc.sendKeys("1234");
 
 		saldo.sendKeys("1000");
