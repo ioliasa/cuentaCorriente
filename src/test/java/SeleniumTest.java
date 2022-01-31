@@ -26,7 +26,7 @@ public class SeleniumTest {
 		
 		
 		
-		driver.get("http://localhost:8081/CuentaCorriente-0.0.1-SNAPSHOT/");
+		driver.get("http://172.21.0.1:8081/CuentaCorriente-0.0.1-SNAPSHOT/");
 		
 		WebElement ncc = driver.findElement(By.id("ncc"));
 		WebElement saldo = driver.findElement(By.id("saldo"));
@@ -39,7 +39,7 @@ public class SeleniumTest {
 		ok.click();
 		String titulo = driver.getCurrentUrl();
 		
-		assertTrue(titulo.equals("http://localhost:8081/CuentaCorriente-0.0.1-SNAPSHOT/adminBanco?action=empezar"));
+		assertTrue(titulo.equals("http://172.21.0.1:8081/CuentaCorriente-0.0.1-SNAPSHOT/adminBanco?action=empezar"));
 		
 }
 
