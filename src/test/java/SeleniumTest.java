@@ -7,8 +7,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SeleniumTest {
 
@@ -18,6 +20,15 @@ public class SeleniumTest {
 	@Before
 	public void inicial() {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized"); 
+		options.addArguments("enable-automation"); 
+		options.addArguments("--no-sandbox"); 
+		options.addArguments("--disable-infobars");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--disable-browser-side-navigation"); 
+		options.addArguments("--disable-gpu");
+		
 		
 		driver = new ChromeDriver();
 	}
