@@ -30,7 +30,7 @@ public class SeleniumTest {
 		options.addArguments("--disable-gpu");
 		
 		
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 	}
 	
 	@Test
