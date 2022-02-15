@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class SeleniumTest {
+public class SeleniunNO {
 
 	
 	private WebDriver driver;
@@ -21,15 +21,17 @@ public class SeleniumTest {
 	public void inicial() {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
 		ChromeOptions options = new ChromeOptions();
+		
+		
+		/*
 		options.addArguments("start-maximized"); 
 		options.addArguments("enable-automation"); 
 		options.addArguments("--no-sandbox"); 
 		options.addArguments("--disable-infobars");
 		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--disable-browser-side-navigation"); 
-		options.addArguments("--disable-gpu");
-		
-		
+		options.addArguments("--disable-gpu");*/
+	
 		driver = new ChromeDriver(options);
 	}
 	
@@ -43,15 +45,15 @@ public class SeleniumTest {
 		WebElement ncc = driver.findElement(By.id("ncc"));
 		WebElement saldo = driver.findElement(By.id("saldo"));
 		WebElement ok = driver.findElement(By.id("ok"));
-		//Thread.sleep(4000);
+		Thread.sleep(4000);
 		ncc.sendKeys("12345678");
-		//Thread.sleep(4000);
+		Thread.sleep(4000);
 
 		saldo.sendKeys("1000");
-		//Thread.sleep(4000);
+		Thread.sleep(4000);
 
 		ok.click();
-		//Thread.sleep(4000);
+		Thread.sleep(4000);
 
 		String titulo = driver.getCurrentUrl();
 		
